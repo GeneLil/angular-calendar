@@ -1,6 +1,7 @@
 import { Component, } from '@angular/core';
 import { CalendarHeaderComponent } from "../calendar-header/calendar-header.component";
 import { CalendarDaysComponent } from "../calendar-days/calendar-days.component";
+import { CalendarGridComponent } from "../calendar-grid/calendar-grid.component";
 import { getDaysInMonth } from "date-fns";
 
 @Component({
@@ -9,6 +10,7 @@ import { getDaysInMonth } from "date-fns";
   imports: [
     CalendarHeaderComponent,
     CalendarDaysComponent,
+    CalendarGridComponent,
   ],
   template: `<div>
     <app-calendar-header 
@@ -23,6 +25,11 @@ import { getDaysInMonth } from "date-fns";
         [currentYear]="currentYear"
         [currentMonth]="currentMonth"
     ></app-calendar-days>
+    <app-calendar-grid
+        [daysInMonth]="daysInMonth"
+        [currentYear]="currentYear"
+        [currentMonth]="currentMonth"
+    ></app-calendar-grid>
   </div>`,
   styleUrl: './calendar.component.css'
 })

@@ -1,8 +1,9 @@
 .header-wrapper {
     align-items: center;
+    border-bottom: 1px solid #efefef;
     display: flex;
     gap: 32px;
-    padding: 16px;
+    margin-bottom: 16px;
 }
 .year-selector {
     align-items: center;

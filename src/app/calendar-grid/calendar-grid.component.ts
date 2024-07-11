@@ -1,26 +1,25 @@
 import { Component, Input } from '@angular/core';
-import { NgFor, CommonModule } from "@angular/common";
 import { format } from "date-fns";
-import { uk } from 'date-fns/locale'
+import { uk } from "date-fns/locale";
+import { NgFor, CommonModule } from "@angular/common";
 
 @Component({
-  selector: 'app-calendar-days',
+  selector: 'app-calendar-grid',
   standalone: true,
   imports: [
-      NgFor,
-      CommonModule,
+    NgFor,
+    CommonModule,
   ],
   template: `
-    <div class="weekdays-wrapper">
-      <div *ngFor="let day of getWeekDays()" [ngClass]="getWeekDayClass(day.dayNumber)">{{ day.dayName }}</div>
-    </div>
-    <div class="days-wrapper">
-      <div *ngFor="let day of getOrderedDays()" [ngClass]="getDayClass(day)">{{ day }}</div>
+    <div class="grid-wrapper">
+      <div class="grid-row">
+        <div *ngFor="let day of getOrderedDays()" [ngClass]="getDayClass(day)"></div>
+      </div>
     </div>
   `,
-  styleUrl: './calendar-days.component.css'
+  styleUrl: './calendar-grid.component.css'
 })
-export class CalendarDaysComponent {
+export class CalendarGridComponent {
   @Input() daysInMonth!: number
   @Input() currentYear!: number
   @Input() currentMonth!: number
@@ -37,20 +36,11 @@ export class CalendarDaysComponent {
     }))
   }
 
-  getWeekDayClass(day: number) {
-    const weekends = [0, 6]
-    const isWeekend = weekends.includes(new Date(this.currentYear, this.currentMonth, day).getDay())
-    return {
-      'weekday-cell': true,
-      'weekend': isWeekend,
-    }
-  }
-
   getDayClass(day: number) {
     const weekends = [0, 6]
     const isWeekend = weekends.includes(new Date(this.currentYear, this.currentMonth, day).getDay())
     return {
-      'day-cell': true,
+      'grid-cell': true,
       'weekend': isWeekend,
     }
   }
