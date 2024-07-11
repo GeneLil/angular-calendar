@@ -21,9 +21,11 @@
     "@angular/platform-browser": "17.2.4",
     "@angular/platform-browser-dynamic": "17.2.4",
     "@angular/router": "17.2.4",
+    "@types/uuid": "^10.0.0",
     "angular-in-memory-web-api": "~0.17.0",
     "date-fns": "^3.6.0",
     "ngx-date-fns": "^11.0.0",
+    "preline": "^2.3.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.0"
@@ -32,8 +34,10 @@
     "@angular-devkit/build-angular": "^17.3.8",
     "@angular/cli": "17.2.3",
     "@angular/compiler-cli": "17.2.4",
+    "@tailwindcss/forms": "^0.5.7",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^16.11.35",
+    "autoprefixer": "^10.4.19",
     "copyfiles": "^2.4.1",
     "jasmine-core": "~5.1.0",
     "jasmine-marbles": "~0.9.2",
@@ -43,8 +47,11 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "postcss": "^8.4.39",
     "protractor": "^3.3.0",
+    "tailwindcss": "^3.4.4",
     "ts-node": "~10.9.0",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "uuid": "^10.0.0"
   }
 }

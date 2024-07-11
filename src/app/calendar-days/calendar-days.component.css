@@ -1,7 +1,6 @@
 .weekdays-wrapper {
     display: flex;
     align-items: center;
-    padding: 0 32px;
 }
 .weekday-cell {
     align-items: center;
@@ -20,7 +19,6 @@
 .days-wrapper {
     display: flex;
     align-items: center;
-    padding: 0 32px;
 }
 .day-cell {
     align-items: center;
@@ -40,5 +38,5 @@
     border-color: white;
 }
 .day-cell:last-of-type {
-    border-right: 1px solid lightgray;
+    border-right: 1px solid #efefef;
 }

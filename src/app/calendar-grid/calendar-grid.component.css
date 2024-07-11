@@ -1,0 +1,21 @@
+.grid-wrapper {
+    margin-top: 16px;
+}
+.grid-row {
+    display: flex;
+    align-items: center;
+}
+.grid-cell {
+    box-sizing: border-box;
+    border: 1px solid #efefef;
+    border-right: none;
+    height: 72px;
+    width: 48px;
+}
+.grid-cell.weekend {
+    background-color: lightpink;
+    border-color: white;
+}
+.grid-cell:last-of-type {
+    border-right: 1px solid #efefef;
+}
